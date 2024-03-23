@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"github.com/Egor-Golang-TSM-Course/final-project-vechnonetot/proto/github.com/Egor-Golang-TSM-Course/final-project-vechnonetot/proto"
 	"log"
 	"net"
 
@@ -10,23 +11,25 @@ import (
 )
 
 // serverImpl реализует ваш gRPC-сервер
-type serverImpl struct{}
+type serverImpl struct {
+	proto.UnimplementedHashingServiceServer
+}
 
 // CheckHash реализует RPC-метод CheckHash
 func (s *serverImpl) CheckHash(ctx context.Context, req *proto.CheckHashRequest) (*proto.CheckHashResponse, error) {
-	// Реализуйте вашу логику здесь
+
 	return &proto.CheckHashResponse{}, nil
 }
 
 // GetHash реализует RPC-метод GetHash
 func (s *serverImpl) GetHash(ctx context.Context, req *proto.GetHashRequest) (*proto.GetHashResponse, error) {
-	// Реализуйте вашу логику здесь
+
 	return &proto.GetHashResponse{}, nil
 }
 
 // CreateHash реализует RPC-метод CreateHash
 func (s *serverImpl) CreateHash(ctx context.Context, req *proto.CreateHashRequest) (*proto.CreateHashResponse, error) {
-	// Реализуйте вашу логику здесь
+
 	return &proto.CreateHashResponse{}, nil
 }
 

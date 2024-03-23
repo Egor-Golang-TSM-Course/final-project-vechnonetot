@@ -4,7 +4,7 @@
 // - protoc             v5.26.0
 // source: hashing.proto
 
-package __
+package proto
 
 import (
 	context "context"
