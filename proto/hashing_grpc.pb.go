@@ -2,9 +2,9 @@
 // versions:
 // - protoc-gen-go-grpc v1.3.0
 // - protoc             v5.26.0
-// source: api/hashing.proto
+// source: hashing.proto
 
-package api
+package __
 
 import (
 	context "context"
@@ -179,5 +179,5 @@ var HashingService_ServiceDesc = grpc.ServiceDesc{
 		},
 	},
 	Streams:  []grpc.StreamDesc{},
-	Metadata: "api/hashing.proto",
+	Metadata: "hashing.proto",
 }

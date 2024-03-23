@@ -39,6 +39,12 @@ type HashingService struct {
 	repo Repository
 }
 
+func NewHashingService(repo Repository) *HashingService {
+	return &HashingService{
+		repo: repo,
+	}
+}
+
 // CheckHash проверяет существует ли хэш полезных данных в репозитории
 func (s *HashingService) CheckHash(ctx context.Context, req *CheckHashRequest) (*CheckHashResponse, error) {
 	// Вызываем метод CheckHashExists репозитория для проверки существования хэша
